@@ -30,7 +30,7 @@ class App extends Component {
   }
 
   updateWindowDimensions() {
-    this.setState({ width: window.innerWidth - 40, height: window.innerHeight });
+    this.setState({ width: window.innerWidth - 40, height: window.innerHeight - 40 });
   }
 
   textUpdateHandler(event) {
