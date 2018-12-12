@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import TextArea from './components/TextArea'
 
 class App extends Component {
   constructor(props) {
@@ -40,8 +41,8 @@ class App extends Component {
 
   render() {
     return (
-      <textarea value={this.state.text} autoFocus style={{width: this.state.width, height: this.state.height}} onChange={this.textUpdateHandler}>
-      </textarea>
+      <TextArea value={this.state.text} width={this.state.width} height={this.state.height} onChange={this.textUpdateHandler}>
+      </TextArea>
     );
   }
 }
