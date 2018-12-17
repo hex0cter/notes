@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import TextArea from './components/TextArea'
+import TextArea from './components/TextArea/TextArea'
+import Burger from './components/Burger/Burger'
 
 class App extends Component {
   constructor(props) {
@@ -41,8 +42,10 @@ class App extends Component {
 
   render() {
     return (
-      <TextArea value={this.state.text} width={this.state.width} height={this.state.height} onChange={this.textUpdateHandler}>
-      </TextArea>
+      <div>
+      <TextArea value={this.state.text} width={this.state.width} height={this.state.height} onChange={this.textUpdateHandler} />
+      <Burger />
+      </div>
     );
   }
 }
