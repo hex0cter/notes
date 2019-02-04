@@ -1,7 +1,7 @@
 textarea {
   background-color:#000000;
   color: #eeeeee;
-  width: 100%;
+  width: calc(100% - 40px);
   margin: 0 auto;
   display: block;
   height: 2000px;
