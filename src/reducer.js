@@ -13,7 +13,8 @@ const activeIndex = localNotes.activeIndex || 0
 const initialState = {
   activeIndex,
   notes: localNotes.notes,
-  activeContent: localNotes.notes[activeIndex] || ''
+  activeContent: localNotes.notes[activeIndex] || '',
+  isSidebarOpen: false
 }
 
 function updateContent(state, newActiveContent) {
@@ -29,6 +30,18 @@ function reducer(state = initialState, action) {
   switch (action.type) {
     case actions.ACTION_UPDATE_CONTENT: {
       return updateContent(state, action.payload)
+    }
+    case actions.ACTION_UPDATE_SIDEBAR_OPEN: {
+      return {
+        ...state,
+        isSidebarOpen: !state.isSidebarOpen
+      }
+    }
+    case actions.ACTION_CLOSE_SIDEBAR: {
+      return {
+        ...state,
+        isSidebarOpen: false
+      }
     }
     default:
       console.log('Action type', action.type)

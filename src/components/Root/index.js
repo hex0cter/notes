@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import TextArea from '../TextArea'
-import SiderBar from '../SiderBar'
+import SiderBar from '../Siderbar'
 
 class Root extends Component {
   render() {

@@ -5,7 +5,7 @@ textarea {
   margin: 0 auto;
   display: block;
   min-height: calc(100vh - 40px);
-  font-family: '"Fira code", "Fira Mono", monospace';
+  font-family: "Fira code", "Fira Mono", monospace;
   font-size: 18px;
   padding: 20px;
   border: 0

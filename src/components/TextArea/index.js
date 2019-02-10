@@ -10,10 +10,19 @@ class TeaxArea extends Component {
     this.props.onUpdateContent(content)
   }
 
+  onClick = () => {
+    this.props.onCloseSidebar()
+  }
+
   render() {
     return (
-      <textarea value={this.props.content} autoFocus style={{width: this.props.width, height: this.props.height}} onChange={this.onChange}>
-      </textarea>
+      <textarea
+        value={this.props.content}
+        autoFocus
+        style={{width: this.props.width, height: this.props.height}}
+        onChange={this.onChange}
+        onClick={this.onClick}
+      />
     )
   }
 }
