@@ -1,10 +1,14 @@
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
   width: 34px;
   height: 2px;
-  background-color: #eee;
+  background-color: rgb(98, 105, 103);
 }
 
-.hamburger {
-  background-color: black;
-  padding: 5px 2px 0px 8px;
+.white-hamburger, .white-hamburger::before, .white-hamburger::after {
+  background-color: rgb(194, 206, 202);
+}
+
+button {
+  border: none;
+  background-color: rgba(0, 0, 0, 1)
 }

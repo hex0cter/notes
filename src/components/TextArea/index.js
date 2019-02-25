@@ -17,7 +17,7 @@ class TeaxArea extends Component {
   render() {
     return (
       <textarea
-        value={this.props.content}
+        value={this.props.activeNote.content}
         autoFocus
         style={{width: this.props.width, height: this.props.height}}
         onChange={this.onChange}
