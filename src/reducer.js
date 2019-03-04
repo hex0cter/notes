@@ -57,13 +57,12 @@ function reducer(state = initialState, action) {
       }
     }
     case actions.ACTION_ADD_NEW_NOTE: {
-      const notes = [...state.notes]
       const newNote = {
         content: '',
         lastUpdate: Date.now()
       }
-      notes.push(newNote)
-      const activeIndex = notes.length - 1
+      const notes = [newNote, ...state.notes]
+      const activeIndex = 0
       return {
         ...state,
         activeIndex,
@@ -74,11 +73,13 @@ function reducer(state = initialState, action) {
     case actions.ACTION_UPDATE_ACTIVE_INDEX: {
       const activeIndex = action.payload
       const activeNote = [...state.notes][activeIndex]
-      return {
+      const newState = {
         ...state,
         activeIndex,
         activeNote
       }
+      localStorage.setItem('local-notes', JSON.stringify(newState))
+      return newState
     }
     default:
       console.log('Action type', action.type)
