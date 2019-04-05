@@ -1,7 +1,7 @@
 {
   "name": "local-notes",
-  "homepage": ".",
   "version": "0.1.0",
+  "homepage": "https://danielhan.dev/notes/",
   "private": true,
   "dependencies": {
     "hamburgers": "^1.1.3",
