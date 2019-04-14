@@ -2,6 +2,7 @@ export const ACTION_UPDATE_CONTENT = 'ACTION_UPDATE_CONTENT'
 export const ACTION_UPDATE_SIDEBAR_OPEN = 'ACTION_UPDATE_SIDEBAR_OPEN'
 export const ACTION_CLOSE_SIDEBAR = 'ACTION_CLOSE_SIDEBAR'
 export const ACTION_ADD_NEW_NOTE = 'ACTION_ADD_NEW_NOTE'
+export const ACTION_DELETE_ALL_NOTES = 'ACTION_DELETE_ALL_NOTES'
 export const ACTION_UPDATE_ACTIVE_INDEX = 'ACTION_UPDATE_ACTIVE_INDEX'
 
 export function updateContent(payload) {
@@ -18,6 +19,10 @@ export function closeSidebar() {
 
 export function addNewNote() {
   return { type: ACTION_ADD_NEW_NOTE }
+}
+
+export function deleteAllNotes() {
+  return { type: ACTION_DELETE_ALL_NOTES }
 }
 
 export function updateActiveIndex(payload) {

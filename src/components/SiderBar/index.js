@@ -7,8 +7,9 @@ import mapDispatchToProps from './map-dispatch-to-props'
 import mapStateToProps from './map-state-to-props'
 import NotesList from '../NotesList'
 import AddNewNote from '../AddNewNote'
+import DeleteAllNotes from '../DeleteAllNotes'
 
-class SiderBar extends Component {
+class Siderbar extends Component {
   render() {
     return (
       <div className={this.props.isSidebarOpen ? styles.SiderbarOpen : styles.Siderbar}>
@@ -20,13 +21,14 @@ class SiderBar extends Component {
           </div>
         </div>
         {this.props.isSidebarOpen ?
-          (<div className={styles.List}>
+          <div className={styles.List}>
           <AddNewNote />
           <NotesList />
-        </div>) : null }
+          <DeleteAllNotes />
+        </div> : null }
       </div>
     )
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(SiderBar)
+export default connect(mapStateToProps, mapDispatchToProps)(Siderbar)

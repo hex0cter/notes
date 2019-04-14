@@ -5,16 +5,16 @@ import styles from './index.module.css'
 import { Button, Icon } from 'antd'
 import 'antd/dist/antd.css'
 
-class AddNewNote extends React.Component {
+class DeleteAllNotes extends React.Component {
   render() {
     return (
       <div
-        className={styles.AddNewNote}
-        onClick={this.props.onAddNewNote}>
-        <Button ghost><Icon type="plus" />Add new</Button>
+        className={styles.DeleteAllNotes}
+        onClick={this.props.onDeleteAllNotes}>
+        <Button ghost type="danger"><Icon type="delete" />Delete all</Button>
       </div>
     )
   }
 }
 
-export default connect(null, mapDispatchToProps)(AddNewNote)
+export default connect(null, mapDispatchToProps)(DeleteAllNotes)

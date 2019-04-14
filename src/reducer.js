@@ -70,6 +70,21 @@ function reducer(state = initialState, action) {
         notes
       }
     }
+    case actions.ACTION_DELETE_ALL_NOTES: {
+      const newNote = {
+        content: '',
+        lastUpdate: Date.now()
+      }
+      const notes = [newNote]
+      const activeIndex = 0
+
+      return {
+        ...state,
+        activeIndex,
+        activeNote: newNote,
+        notes
+      }
+    }
     case actions.ACTION_UPDATE_ACTIVE_INDEX: {
       const activeIndex = action.payload
       const activeNote = [...state.notes][activeIndex]

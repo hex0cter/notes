@@ -11,7 +11,9 @@ class TeaxArea extends Component {
   }
 
   onClick = () => {
-    this.props.onCloseSidebar()
+    if (window.innerWidth < 600) {
+      this.props.onCloseSidebar()
+    }
   }
 
   render() {

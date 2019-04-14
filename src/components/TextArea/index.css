@@ -1,12 +1,12 @@
 textarea {
   background-color:#000000;
-  color: #eeeeee;
-  width: calc(100% - 40px);
+  color: #eeeeee !important;
+  width: calc(100%);
   margin: 0 auto;
   display: block;
-  min-height: calc(100vh - 40px);
-  font-family: "Fira code", "Fira Mono", monospace;
-  font-size: 18px;
+  min-height: calc(100vh);
+  font-family: "Fira code", "Fira Mono", monospace !important;
+  font-size: 18px !important;
   padding: 20px;
   border: 0
 }

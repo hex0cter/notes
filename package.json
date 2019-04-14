@@ -4,6 +4,7 @@
   "homepage": "https://danielhan.dev/notes/",
   "private": true,
   "dependencies": {
+    "antd": "^3.20.7",
     "hamburgers": "^1.1.3",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
