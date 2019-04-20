@@ -3,9 +3,10 @@
   border-bottom: 1px solid rgba(153, 150, 150, 0.637);
   height: 4em;
   margin: 0 2px 0 2px;
-  cursor: pointer;
+  cursor: default;
   color: rgb(190, 189, 189);
   overflow: hidden;
+  display: flex;
 }
 
 .NotePreviewActive {
@@ -13,8 +14,20 @@
   border-bottom: 1px solid rgba(153, 150, 150, 0.637);
   height: 4em;
   margin: 0 2px 0 2px;
-  cursor: pointer;
+  cursor: default;
   color: rgb(190, 189, 189);
   overflow: hidden;
   background-color: rgba(24, 24, 23, 0.219);
+  display: flex;
+}
+
+.PreviewText {
+  width: 100%;
+}
+
+.DeleteButton {
+  cursor: pointer;
+  margin-left: auto;
+  order: 2;
+  font-size: x-large;
 }

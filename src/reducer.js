@@ -17,26 +17,69 @@ const activeIndex = localNotes.activeIndex || 0
 const initialState = {
   activeIndex,
   notes: localNotes.notes,
-  activeNote: localNotes.notes[activeIndex] || defaultInitialNote,
   isSidebarOpen: false
 }
 
 function updateContent(state, newActiveContent) {
-  const activeNote = {
+  const notes = [...state.notes]
+  notes[state.activeIndex] = {
     content: newActiveContent,
     lastUpdate: Date.now()
   }
-  const notes = [...state.notes]
-  notes[state.activeIndex] = activeNote
 
   const newState = {
     ...state,
-    activeNote,
     notes
    }
   localStorage.setItem('local-notes', JSON.stringify(newState))
 
   return newState
+}
+
+function deleteNote(state, indexToDelete) {
+  const newState = {...state}
+  const activeIndex = newState.activeIndex
+  const notes = [...newState.notes]
+  let updatedState
+
+  debugger
+  if(indexToDelete > activeIndex) {
+    notes.splice(indexToDelete, 1)
+    updatedState = {
+      ...newState,
+      notes
+    }
+  } else if (indexToDelete < activeIndex) {
+    notes.splice(indexToDelete, 1)
+    const newActiveIndex = activeIndex - 1
+    updatedState = {
+      ...newState,
+      notes,
+      activeIndex: newActiveIndex,
+    }
+  } else if (indexToDelete === activeIndex && newState.notes.length > 1) {
+    notes.splice(indexToDelete, 1)
+    const newActiveIndex = activeIndex - 1
+
+    updatedState = {
+      ...newState,
+      notes,
+      activeIndex: newActiveIndex,
+    }
+  } else {
+    const notes = [{
+      content: '',
+      lastUpdate: Date.now()
+    }]
+    updatedState = {
+      ...newState,
+      notes,
+      activeIndex: 0
+    }
+  }
+
+  localStorage.setItem('local-notes', JSON.stringify(updatedState))
+  return updatedState
 }
 
 function reducer(state = initialState, action) {
@@ -66,9 +109,11 @@ function reducer(state = initialState, action) {
       return {
         ...state,
         activeIndex,
-        activeNote: newNote,
         notes
       }
+    }
+    case actions.ACTION_DELETE_NOTE: {
+      return deleteNote(state, action.payload)
     }
     case actions.ACTION_DELETE_ALL_NOTES: {
       const newNote = {
@@ -81,17 +126,15 @@ function reducer(state = initialState, action) {
       return {
         ...state,
         activeIndex,
-        activeNote: newNote,
         notes
       }
     }
     case actions.ACTION_UPDATE_ACTIVE_INDEX: {
+      console.log('switching index...')
       const activeIndex = action.payload
-      const activeNote = [...state.notes][activeIndex]
       const newState = {
         ...state,
         activeIndex,
-        activeNote
       }
       localStorage.setItem('local-notes', JSON.stringify(newState))
       return newState

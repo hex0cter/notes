@@ -1,6 +1,6 @@
 const mapStateToProps = (state) => {
   return {
-    activeNote: state.activeNote
+    content: state.notes[state.activeIndex].content
   }
 }
 
