@@ -57,6 +57,13 @@ function deleteNote(state, indexToDelete) {
       notes,
       activeIndex: newActiveIndex,
     }
+  } else if (indexToDelete === activeIndex && activeIndex === 0) {
+    notes.splice(indexToDelete, 1)
+
+    updatedState = {
+      ...newState,
+      notes
+    }
   } else if (indexToDelete === activeIndex && newState.notes.length > 1) {
     notes.splice(indexToDelete, 1)
     const newActiveIndex = activeIndex - 1
