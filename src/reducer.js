@@ -42,7 +42,6 @@ function deleteNote(state, indexToDelete) {
   const notes = [...newState.notes]
   let updatedState
 
-  debugger
   if(indexToDelete > activeIndex) {
     notes.splice(indexToDelete, 1)
     updatedState = {
@@ -57,31 +56,34 @@ function deleteNote(state, indexToDelete) {
       notes,
       activeIndex: newActiveIndex,
     }
-  } else if (indexToDelete === activeIndex && activeIndex === 0) {
-    notes.splice(indexToDelete, 1)
+  } else if (indexToDelete === activeIndex) {
+    if (activeIndex === 0) {
+      if (newState.notes.length > 1) {
+        notes.splice(indexToDelete, 1)
+        updatedState = {
+          ...newState,
+          notes
+        }
+      } else {
+        const notes = [{
+          content: '',
+          lastUpdate: Date.now()
+        }]
+        updatedState = {
+          ...newState,
+          notes,
+          activeIndex: 0
+        }
+      }
+    } else {
+      notes.splice(indexToDelete, 1)
+      const newActiveIndex = activeIndex - 1
 
-    updatedState = {
-      ...newState,
-      notes
-    }
-  } else if (indexToDelete === activeIndex && newState.notes.length > 1) {
-    notes.splice(indexToDelete, 1)
-    const newActiveIndex = activeIndex - 1
-
-    updatedState = {
-      ...newState,
-      notes,
-      activeIndex: newActiveIndex,
-    }
-  } else {
-    const notes = [{
-      content: '',
-      lastUpdate: Date.now()
-    }]
-    updatedState = {
-      ...newState,
-      notes,
-      activeIndex: 0
+      updatedState = {
+        ...newState,
+        notes,
+        activeIndex: newActiveIndex,
+      }
     }
   }
 

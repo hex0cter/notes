@@ -9,6 +9,7 @@ class NotePreview extends React.Component {
   updateActiveIndex = (e) => {
     console.log('onUpdateActiveIndex')
     this.props.onUpdateActiveIndex(this.props.currentIndex)
+    window.document.getElementById("textarea").focus();
     e.preventDefault()
   }
 

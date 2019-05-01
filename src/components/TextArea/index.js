@@ -21,6 +21,7 @@ class TeaxArea extends Component {
       <textarea
         value={this.props.content}
         autoFocus
+        id='textarea'
         style={{width: this.props.width, height: this.props.height}}
         onChange={this.onChange}
         onClick={this.onClick}
