@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import styles from './index.module.css'
-import './index.css'
 import { connect } from "react-redux"
 import mapDispatchToProps from './map-dispatch-to-props'
 import mapStateToProps from './map-state-to-props'

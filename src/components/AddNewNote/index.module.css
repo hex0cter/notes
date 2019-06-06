@@ -1,5 +1,5 @@
 .AddNewNote {
-  border: 1px solid rgba(153, 150, 150, 0.637);
+  border-bottom: 1px solid rgba(153, 150, 150, 0.637);
   height: 4em;
   line-height: 4em;
   text-align: center;

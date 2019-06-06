@@ -21,6 +21,22 @@
   display: inline-block;
   overflow: scroll;
   background-color: rgba(98, 105, 103, 0.952);
+  -webkit-animation-name: openSiderBar; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 0.2s; /* Safari 4.0 - 8.0 */
+  animation-name: openSiderBar;
+  animation-duration: 0.2s;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes openSiderBar {
+  from {width: 0;}
+  to {width: 200px;}
+}
+
+/* Standard syntax */
+@keyframes openSiderBar {
+  from {width: 0;}
+  to {width: 200px;}
 }
 
 .List {
