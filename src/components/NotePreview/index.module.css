@@ -23,11 +23,10 @@
 
 .PreviewText {
   width: 100%;
+  overflow: hidden;
 }
 
 .DeleteButton {
   cursor: pointer;
-  margin-left: auto;
-  order: 2;
   font-size: x-large;
 }

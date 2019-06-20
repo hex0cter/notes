@@ -27,7 +27,7 @@ class NotePreview extends React.Component {
           { this.props.currentNote.content }
         </div>
         <div className={styles.DeleteButton} onClick={this.deleteNote}>
-          <Icon type="delete" />
+          <Icon type="delete"/>
         </div>
       </div>
     )
