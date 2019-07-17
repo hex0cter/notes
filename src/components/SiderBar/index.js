@@ -27,6 +27,7 @@ class Siderbar extends Component {
           <AddNewNote />
           <NotesList />
           <DeleteAllNotes />
+          <div className={styles.Footer} ><a href='https://danielhan.dev'>Daniel Han &copy;</a></div>
         </div> : null }
       </div>
     )

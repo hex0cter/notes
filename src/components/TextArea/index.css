@@ -10,3 +10,7 @@ textarea {
   padding: 20px;
   border: 0
 }
+
+textarea:focus {
+  outline: none;
+}
