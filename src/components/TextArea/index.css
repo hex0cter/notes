@@ -1,5 +1,5 @@
 textarea {
-  background-color:#000000;
+  background-color:#1d1c1c;
   color: #eeeeee !important;
   width: calc(100%);
   margin: 0 auto;
@@ -8,9 +8,35 @@ textarea {
   font-family: "Fira code", "Fira Mono", monospace !important;
   font-size: 18px !important;
   padding: 20px;
-  border: 0
+  border: none;
+  resize: none;
 }
 
 textarea:focus {
   outline: none;
+}
+
+::-webkit-input-placeholder {
+  font-style: italic;
+  font-size: 16px;
+}
+::-moz-placeholder {
+  font-style: italic;
+  font-size: 16px;
+}
+:-ms-input-placeholder {
+  font-style: italic;
+  font-size: 16px;
+}
+::placeholder {
+  font-style: italic;
+  font-size: 16px;
+}
+
+textarea {
+  border-radius: 0;
+}
+
+textarea {
+  -webkit-appearance: none;
 }

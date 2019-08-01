@@ -139,11 +139,12 @@ function reducer(state = initialState, action) {
       }
     }
     case actions.ACTION_UPDATE_ACTIVE_INDEX: {
-      console.log('switching index...')
       const activeIndex = action.payload
+      const isSidebarOpen = window.innerWidth > 375 ? state.isSidebarOpen : false
       const newState = {
         ...state,
         activeIndex,
+        isSidebarOpen
       }
       localStorage.setItem('local-notes', JSON.stringify(newState))
       return newState

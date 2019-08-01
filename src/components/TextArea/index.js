@@ -11,7 +11,7 @@ class TeaxArea extends Component {
   }
 
   onClick = () => {
-    this.props.onCloseSidebar()
+    // this.props.onCloseSidebar()
   }
 
   render() {
@@ -23,7 +23,7 @@ class TeaxArea extends Component {
         style={{width: this.props.width, height: this.props.height}}
         onChange={this.onChange}
         onClick={this.onClick}
-        placeholder={'Take your note here... \n\nYour notes are saved automatically in the browser\'s local storage. It persists upon reload but never leave your device.'}
+        placeholder={'Please write here...'}
       />
     )
   }

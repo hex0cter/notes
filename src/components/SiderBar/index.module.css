@@ -17,26 +17,37 @@
   top: 0px;
   right: 0px;
   height: calc(100% - 0px);
-  width: 200px;
   display: inline-block;
   overflow: scroll;
   background-color: rgba(98, 105, 103, 0.952);
-  -webkit-animation-name: openSiderBar; /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 0.2s; /* Safari 4.0 - 8.0 */
-  animation-name: openSiderBar;
-  animation-duration: 0.2s;
+}
+
+@media screen and (max-width: 375px) {
+  .SiderbarOpen {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 376px) {
+  .SiderbarOpen {
+    width: 300px;
+    -webkit-animation-name: openSiderBar; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 0.2s; /* Safari 4.0 - 8.0 */
+    animation-name: openSiderBar;
+    animation-duration: 0.2s;
+    }
 }
 
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes openSiderBar {
   from {width: 0;}
-  to {width: 200px;}
+  to {width: 300px;}
 }
 
 /* Standard syntax */
 @keyframes openSiderBar {
   from {width: 0;}
-  to {width: 200px;}
+  to {width: 300px;}
 }
 
 .List {
