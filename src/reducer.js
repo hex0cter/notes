@@ -1,12 +1,5 @@
 import * as actions from './actions'
 
-// Default structure: {
-//   activeIndex: 0,
-//   notes: [
-//     'foo',
-//     'bar'
-//   ]
-// }
 const defaultInitialNote = {
   lastUpdate: Date.now(),
   content: ''

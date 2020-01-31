@@ -11,7 +11,7 @@ class TeaxArea extends Component {
   }
 
   onClick = () => {
-    // this.props.onCloseSidebar()
+    this.props.onCloseSidebar()
   }
 
   render() {
