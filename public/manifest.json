@@ -5,7 +5,7 @@
   "background_color": "#000000",
   "display": "standalone",
   "scope": "/notes/",
-  "start_url": "https://danielhan.dev/notes/",
+  "start_url": "https://hex0cter.github.io/notes/",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
