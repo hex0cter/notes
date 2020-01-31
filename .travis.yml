@@ -12,4 +12,4 @@ script:
     - git add .
     - "git commit -m \"Update gh-pages (Travis build: $TRAVIS_BUILD_NUMBER)\""
 after_success:
-    - git push
+    - git push origin HEAD:master
