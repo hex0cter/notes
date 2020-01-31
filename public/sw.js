@@ -5,8 +5,8 @@ self.addEventListener('install', (event) => {
     caches.open('static')
       .then(function (cache) {
         cache.addAll([
-          '/manifest.json',
-          '/favicon.ico',
+          './manifest.json',
+          './favicon.ico',
         ]);
       })
   );
