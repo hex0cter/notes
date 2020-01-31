@@ -6,7 +6,6 @@ branches:
   - master
 install:
     - yarn install
-    - find src
     - yarn build
 script:
     - git add .
