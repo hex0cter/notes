@@ -10,7 +10,7 @@ install:
     - yarn build
 script:
     - git add .
-    - "git commit -m \"Update gh-pages (Travis build: $TRAVIS_BUILD_NUMBER)\""
+    - "git commit -m \"Update docs (travis build: $TRAVIS_BUILD_NUMBER)\""
 after_success:
     - git remote set-url origin https://${GITHUB_TOKEN}@github.com/hex0cter/notes.git
     - git push origin HEAD:master
