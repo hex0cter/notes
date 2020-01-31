@@ -143,7 +143,6 @@ function reducer(state = initialState, action) {
       return newState
     }
     default:
-      console.log('Action type', action.type)
       return state
     }
   }

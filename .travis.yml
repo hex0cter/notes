@@ -6,10 +6,11 @@ branches:
   - master
 install:
     - yarn install
-    - yarn build
 script:
-    - git add .
-    - "git commit -m \"Update docs (travis build: $TRAVIS_BUILD_NUMBER)\""
+    - yarn build
 after_success:
+    - git add .
+    - git status
+    - "git commit -m \"Update docs (travis build: $TRAVIS_BUILD_NUMBER)\""
     - git remote set-url origin https://${GITHUB_TOKEN}@github.com/hex0cter/notes.git
     - git push origin HEAD:master
