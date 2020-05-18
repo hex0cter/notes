@@ -1,5 +1,4 @@
 # Quick notes
-[![Build Status](https://travis-ci.org/hex0cter/notes.svg?branch=master)](https://travis-ci.org/hex0cter/notes)
 
 Take quick notes right away from your browser!
 
