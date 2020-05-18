@@ -23,5 +23,5 @@ deploy:
   bucket: "notes.danielhan.dev"
   skip_cleanup: false
   acl: public_read
-  local_dir: "$PWD/build"
+  # local_dir: "$PWD/build"
   region: "eu-north-1"
