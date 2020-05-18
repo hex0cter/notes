@@ -9,6 +9,7 @@ install:
 script:
     - yarn build
     - ls
+    - ls build
 # after_success:
 #     - git add .
 #     - git status
@@ -22,5 +23,5 @@ deploy:
   bucket: "notes.danielhan.dev"
   skip_cleanup: false
   acl: public_read
-  local_dir: build
+  local_dir: ./build
   region: "eu-north-1"
