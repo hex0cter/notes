@@ -9,7 +9,7 @@ install:
 script:
     - yarn build
     - ls
-    - ls build
+    - ls /home/travis/build/hex0cter/notes/build
 # after_success:
 #     - git add .
 #     - git status
