@@ -9,6 +9,7 @@ install:
 script:
     - yarn build
 after_success:
+    - aws s3 ls
     - git add .
     - git status
     - "git commit -m \"Update docs (travis build: $TRAVIS_BUILD_NUMBER)\""
