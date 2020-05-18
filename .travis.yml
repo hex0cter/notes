@@ -16,8 +16,10 @@ script:
 #     - git push origin HEAD:master
 deploy:
   provider: s3
-  access_key_id: "${AWS_ACCESS_KEY}"
-  secret_access_key: "${AWS_SECRET_KEY}"
+  # access_key_id: "${AWS_ACCESS_KEY_ID}"
+  # secret_access_key: "${AWS_SECRET_ACCESS_KEY}"
   bucket: "notes.danielhan.dev"
   skip_cleanup: false
+  acl: public_read
+  local_dir: build
   region: "eu-north-1"
