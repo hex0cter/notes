@@ -21,7 +21,7 @@ deploy:
   # access_key_id: "${AWS_ACCESS_KEY_ID}"
   # secret_access_key: "${AWS_SECRET_ACCESS_KEY}"
   bucket: "notes.danielhan.dev"
-  skip_cleanup: false
+  skip_cleanup: true
   acl: public_read
-  # local_dir: "$PWD/build"
+  local_dir: build
   region: "eu-north-1"
